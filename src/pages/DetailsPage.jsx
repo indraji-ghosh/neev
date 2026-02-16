@@ -1,9 +1,7 @@
-import React from 'react';
+import FAQ from '../components/ui/home/faqSection/FaqSection';
 import HeroSection from '../components/ui/detailspage/HeroSection';
 import ColorGallerySection from '../components/ui/detailspage/ColorGallerySection';
 import SpecificationsSection from '../components/ui/detailspage/SpecificationsSection';
-import CTASection from '../components/ui/detailspage/CTASection';
-import FAQ from '../components/ui/home/faqSection/FaqSection';
 
 const DetailsPage = () => {
   // Product data
