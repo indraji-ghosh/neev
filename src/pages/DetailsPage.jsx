@@ -7,7 +7,7 @@ const DetailsPage = () => {
   // Product data
   const product = {
     name: 'Volt S1 Pro',
-    tagline: 'The future of urban mobility',
+    tagline: 'The future of urban mobility.',
     price: '₹1,49,999',
     mainImage: 'https://images.unsplash.com/photo-1558980663-3685c1d673c4?w=800&h=600&fit=crop',
     highlights: [
