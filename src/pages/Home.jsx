@@ -7,11 +7,13 @@ import Slider from '../components/ui/Slider'
 import WhatsAppButton from '../components/ui/WhatsappButton'
 import ContactSection from '../components/ui/home/locationSection/ContactSection'
 import TestRideBooking from '../components/ui/home/testRideSection/TestRideBookingSection'
+import FAQ from '../components/ui/home/faqSection/FaqSection'
+import DetailsPage from './DetailsPage'
 
 function Home() { 
   return (
     <>
-      <Header />
+      
       <Slider/>
       <WhatsAppButton/>
       <FeaturedSection/>
@@ -19,7 +21,7 @@ function Home() {
       <ComparisionSection/>
       <TestRideBooking/>
       <ContactSection/>
-      <Footer/>
+      <FAQ/>
     </> 
   )
 }

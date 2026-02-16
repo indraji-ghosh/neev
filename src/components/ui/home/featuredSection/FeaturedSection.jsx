@@ -90,10 +90,10 @@ const FeaturedSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl font-semibold text-black mb-4">
+          <h1 className="text-3xl md:text-4xl font-semibold text-black mb-4">
             Featured Scooter Models
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-md md:text-lg text-gray-600 max-w-2xl mx-auto">
             Discover our premium collection of electric scooters designed for the modern urban commuter
           </p>
         </motion.div>

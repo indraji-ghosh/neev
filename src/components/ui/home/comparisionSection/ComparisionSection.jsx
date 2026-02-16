@@ -127,7 +127,7 @@ const ComparisionSection = () => {
 
           {/* Main Heading */}
           <motion.h1 
-            className="text-5xl md:text-6xl font-semibold text-black mb-6"
+            className="text-4xl md:text-5xl font-semibold text-black mb-6"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.8 }}
@@ -138,7 +138,7 @@ const ComparisionSection = () => {
 
           {/* Subtitle */}
           <motion.p 
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-md md:text-lg text-gray-600 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.8 }}

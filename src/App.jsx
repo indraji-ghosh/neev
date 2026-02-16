@@ -1,14 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router'
 import './App.css'
 import Home from './pages/Home'
+import DetailsPage from './pages/DetailsPage'
+import Header from './components/ui/Header'
+import { Footer } from './components/ui/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <Home/>
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/details" element={<DetailsPage />} />
+            <Route path="/details/:id" element={<DetailsPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 

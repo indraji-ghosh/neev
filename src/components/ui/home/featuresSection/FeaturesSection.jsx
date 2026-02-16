@@ -113,7 +113,7 @@ const FeaturesSection = () => {
 
           {/* Main Heading */}
           <motion.h1 
-            className="text-5xl md:text-6xl font-semibold text-black mb-6"
+            className="text-3xl md:text-5xl font-semibold text-black mb-6"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.8 }}
@@ -124,7 +124,7 @@ const FeaturesSection = () => {
 
           {/* Supporting Text */}
           <motion.p 
-            className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-md md:text-md text-gray-600 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.8 }}

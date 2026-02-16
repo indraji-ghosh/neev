@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import slide1image from '../../assets/slide2image.png';
+import slide1image from '../../assets/slideImage1.png';
 
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
