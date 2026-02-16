@@ -1,95 +1,121 @@
-import React, { useState } from 'react'
+import { Zap, Menu, X } from "lucide-react";
+import { useState } from "react";
+import logo from '../../assets/logo.png';
 
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo Section */}
-          <div className="flex items-center space-x-2">
-            <div className="flex flex-col">
-              <div className="flex items-center space-x-1">
-                <span className="text-2xl font-bold text-blue-600">Neev</span>
-                <svg 
-                  className="w-5 h-5 text-green-500" 
-                  fill="currentColor" 
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M11 3L6 13h4l-1 7 5-10h-4l1-7z" />
-                </svg>
-              </div>
-              <span className="text-[10px] text-gray-600 tracking-wide">GREEN ENERGY</span>
+    <>
+      {/* Desktop Header */}
+      <div className="hidden md:flex w-full justify-center pt-6 fixed top-0 z-30">
+        <nav
+          className="
+          flex items-center gap-8
+          px-6 py-3
+          rounded-2xl
+          bg-black/80
+          backdrop-blur-md
+          border border-white/20
+          shadow-lg
+        "
+        >
+          {/* Logo */}
+          <div className="flex items-center gap-2 text-bl font-medium">
+            <div className="rounded-md bg-white/10 flex items-center justify-center">
+              <img src={logo} alt="Logo" className="w-20" />
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition">Home</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition">About</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition">Services</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition">Contact</a>
+          {/* Links */}
+          <div className="flex items-center gap-8 text-white/90">
+            <a className="hover:text-white transition cursor-pointer">Home</a>
+            <a className="hover:text-white transition cursor-pointer">Scooters</a>
+            <a className="hover:text-white transition cursor-pointer">Contact</a>
           </div>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
-            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition">
-              Book a Test Ride
-            </button>
+          {/* Button */}
+          <button
+            className="
+            ml-4
+            px-4 py-2
+            font-bold
+            rounded-xl
+            bg-white/90
+            text-black
+            text-sm
+            hover:bg-black
+            transition
+          "
+          >
+           Book a Test Ride
+          </button>
+        </nav>
+      </div>
+
+      {/* Mobile Header */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-30 p-4">
+        <div className="flex items-center justify-between bg-black backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3 shadow-lg">
+          {/* Logo */}
+          <div className="flex items-center gap-2 text-white font-medium">
+            <div className="rounded-md bg-white/20 flex items-center justify-center">
+              <img src={logo} alt="Logo" className="w-20" />
+            </div>
+              <h1 className="text-xl font-bold text-white ml-2">NEEV <span className="text-green-800 font-medium">Green Energy</span></h1>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none"
-              aria-label="Toggle menu"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isMenuOpen ? (
-                  <path d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
+          {/* Hamburger Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-white p-2 hover:bg-white/10 rounded-lg transition"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden pb-4 pt-2">
-            <div className="flex flex-col space-y-3">
-              <a href="#" className="text-gray-700 hover:text-blue-600 px-2 py-2 rounded transition">
+        {mobileMenuOpen && (
+          <div className="mt-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg overflow-hidden">
+            <div className="flex flex-col p-4 space-y-4">
+              <a
+                className="text-white/90 hover:text-white transition py-2 cursor-pointer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Home
               </a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 px-2 py-2 rounded transition">
-                About
+              <a
+                className="text-white/90 hover:text-white transition py-2 cursor-pointer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Scooters
               </a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 px-2 py-2 rounded transition">
-                Services
-              </a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 px-2 py-2 rounded transition">
+              <a
+                className="text-white/90 hover:text-white transition py-2 cursor-pointer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Contact
               </a>
-              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition w-full">
+              <button
+                className="
+                w-full
+                px-4 py-3
+                font-bold
+                rounded-xl
+                bg-black/90
+                text-white
+                text-sm
+                hover:bg-black
+                transition
+              "
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Book a Test Ride
               </button>
             </div>
           </div>
         )}
-      </nav>
-    </header>
-  )
+      </div>
+    </>
+  );
 }
-
-export default Header
