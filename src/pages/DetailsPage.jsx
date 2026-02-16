@@ -1,8 +1,8 @@
 import FAQ from '../components/ui/home/faqSection/FaqSection';
-import HeroSection from '../components/ui/detailsPage/HeroSection';
-import ColorGallerySection from '../components/ui/detailsPage/ColorGallerySection';
-import SpecificationsSection from '../components/ui/detailsPage/SpecificationsSection';
-import CTASection from '../components/ui/detailsPage/CTASection';
+import HeroSection from '../components/ui/details-page/HeroSection';
+import ColorGallerySection from '../components/ui/details-page/ColorGallerySection';
+import SpecificationsSection from '../components/ui/details-page/SpecificationsSection';
+import CTASection from '../components/ui/details-page/CTASection';
 
 const DetailsPage = () => {
   // Product data

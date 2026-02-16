@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'lucide-react';
 
 function ProductCard( { scooter }) {
   const cardVariants = {
@@ -59,7 +60,7 @@ function ProductCard( { scooter }) {
                   </div>
 
                   {/* CTA Button */}
-                  <a href={`/details`}>
+                  <Link href={`/details`}>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -68,7 +69,7 @@ function ProductCard( { scooter }) {
                     
                     View Details
                   </motion.button>
-                    </a>
+                   </Link>
                 </div>
               </div>
             </motion.div>
