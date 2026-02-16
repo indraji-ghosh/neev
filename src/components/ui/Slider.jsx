@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import slide1image from '../../assets/slideImage1.png';
+import slide1imageMobile from '../../assets/slideImage1mobile.png';
 
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,12 +11,12 @@ export default function Slider() {
   const slides = [
     {
       title: "It's easy to own an Ather.",
-      mobileImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+      mobileImage: slide1imageMobile,
       tabletImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop",
       desktopImage: slide1image,
       buttons: [
-        { text: "Book a testride", primary: true },
-        { text: "Request a call back", primary: false }
+        { text: "Book a Testride", primary: true },
+        // { text: "Request a call back", primary: false }
       ]
     },
     {

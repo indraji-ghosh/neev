@@ -59,13 +59,16 @@ function ProductCard( { scooter }) {
                   </div>
 
                   {/* CTA Button */}
+                  <a href={`/details`}>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="w-full mt-6 py-3 px-6 bg-black/90 text-white rounded-md font-medium hover:bg-gray-800 transition-colors duration-200"
                   >
+                    
                     View Details
                   </motion.button>
+                    </a>
                 </div>
               </div>
             </motion.div>

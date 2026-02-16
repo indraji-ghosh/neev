@@ -45,15 +45,13 @@ export const Footer = () => {
           {/* Left: Bio Section */}
           <div className="lg:col-span-4">
             <p className="text-primary/80 text-xs leading-relaxed mb-6">
-              Pritha Mohinta is a global motivational speaker, award-winning author, 
-              and purpose-driven entrepreneur dedicated to empowering individuals to 
-              unlock their full potential and create lasting transformation.
+             Neev Green Energy delivers reliable electric scooters designed for modern urban mobility. Combining efficient battery technology, smart charging, and durable engineering, we empower riders with eco-friendly transportation solutions for everyday journeys across cities and communities.
             </p>
             
             {/* Social Links */}
             <div>
               <p className="text-xs uppercase tracking-wider text-primary/80 mb-3 font-semibold">
-                Follow Pritha:
+                Follow Neev Green Energy:
               </p>
               <div className="flex items-center gap-3 flex-wrap">
                 {socialLinks.map((social) => (
