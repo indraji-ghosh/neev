@@ -60,7 +60,7 @@ function ProductCard( { scooter }) {
                   </div>
 
                   {/* CTA Button */}
-                  <Link href={`/details`}>
+                  <a href={`/details`}>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -69,7 +69,7 @@ function ProductCard( { scooter }) {
                     
                     View Details
                   </motion.button>
-                   </Link>
+                   </a>
                 </div>
               </div>
             </motion.div>
