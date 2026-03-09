@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'lucide-react';
+import { Link } from 'react-router';
 
 function ProductCard( { scooter }) {
   const cardVariants = {
@@ -29,7 +29,7 @@ function ProductCard( { scooter }) {
                 {/* Image Container */}
                 <div className="relative h-64 bg-gray-50 overflow-hidden">
                   <img
-                    src={scooter.image}
+                    src={scooter.mainImage}
                     alt={scooter.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -60,16 +60,15 @@ function ProductCard( { scooter }) {
                   </div>
 
                   {/* CTA Button */}
-                  <a href={`/details`}>
+                  <Link to={`/details/${scooter.id}`}>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="w-full mt-6 py-3 px-6 bg-black/90 text-white rounded-md font-medium hover:bg-gray-800 transition-colors duration-200"
                   >
-                    
                     View Details
                   </motion.button>
-                   </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>

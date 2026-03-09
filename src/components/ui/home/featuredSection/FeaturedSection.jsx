@@ -1,58 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
+import scooters from '../../../../data/scooters';
 
 const FeaturedSection = () => {
-  const scooters = [
-    {
-      id: 1,
-      name: "Urban Glide X1",
-      price: "$899",
-      range: "45 miles",
-      topSpeed: "25 mph",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTjZPl8O0qkANsmTFRCljfOe1jyDY42o0ci7n-yGPph8IGNRl_BciFoAvGwK1rhJJy3VEfn4KlRCKPVFoYtVDINUL50jBmkfncPq7d_yE&s=10"
-    },
-    {
-      id: 2,
-      name: "City Cruiser Pro",
-      price: "$1,299",
-      range: "60 miles",
-      topSpeed: "28 mph",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTjZPl8O0qkANsmTFRCljfOe1jyDY42o0ci7n-yGPph8IGNRl_BciFoAvGwK1rhJJy3VEfn4KlRCKPVFoYtVDINUL50jBmkfncPq7d_yE&s=10"
-    },
-    {
-      id: 3,
-      name: "Metro Swift",
-      price: "$749",
-      range: "35 miles",
-      topSpeed: "22 mph",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTjZPl8O0qkANsmTFRCljfOe1jyDY42o0ci7n-yGPph8IGNRl_BciFoAvGwK1rhJJy3VEfn4KlRCKPVFoYtVDINUL50jBmkfncPq7d_yE&s=10"
-    },
-    {
-      id: 4,
-      name: "Velocity Max",
-      price: "$1,599",
-      range: "75 miles",
-      topSpeed: "30 mph",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTjZPl8O0qkANsmTFRCljfOe1jyDY42o0ci7n-yGPph8IGNRl_BciFoAvGwK1rhJJy3VEfn4KlRCKPVFoYtVDINUL50jBmkfncPq7d_yE&s=10"
-    },
-    {
-      id: 5,
-      name: "Eco Rider S2",
-      price: "$649",
-      range: "30 miles",
-      topSpeed: "20 mph",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTjZPl8O0qkANsmTFRCljfOe1jyDY42o0ci7n-yGPph8IGNRl_BciFoAvGwK1rhJJy3VEfn4KlRCKPVFoYtVDINUL50jBmkfncPq7d_yE&s=10"
-    },
-    {
-      id: 6,
-      name: "Thunder Elite",
-      price: "$1,899",
-      range: "90 miles",
-      topSpeed: "32 mph",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTjZPl8O0qkANsmTFRCljfOe1jyDY42o0ci7n-yGPph8IGNRl_BciFoAvGwK1rhJJy3VEfn4KlRCKPVFoYtVDINUL50jBmkfncPq7d_yE&s=10"
-    }
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },

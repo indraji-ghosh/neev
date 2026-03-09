@@ -2,6 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import slide1image from '../../assets/slideImage1.png';
 import slide1imageMobile from '../../assets/slideImage1mobile.png';
+import slideImage5 from '../../assets/slideImage5.png';
+import slideImage6 from '../../assets/slideImage6.png';
+import slide3mobile from '../../assets/slide3mobile.png';
+import slide2imagemobile from '../../assets/slide2imagemobile.png';
 
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,24 +25,24 @@ export default function Slider() {
     },
     {
       title: "Experience the Future of Mobility",
-      mobileImage: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=800&h=1200&fit=crop",
+      mobileImage: slide2imagemobile,
       tabletImage: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=1200&h=800&fit=crop",
-      desktopImage: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=1920&h=800&fit=crop",
+      desktopImage: slideImage5,
       buttons: [
-        { text: "Explore models", primary: true },
-        { text: "Find a store", primary: false }
+        { text: "Book a Testride", primary: true },
+
       ]
     },
-    {
-      title: "Ride Smart, Ride Electric",
-      mobileImage: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=800&h=1200&fit=crop",
-      tabletImage: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=1200&h=800&fit=crop",
-      desktopImage: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=1920&h=800&fit=crop",
-      buttons: [
-        { text: "Learn more", primary: true },
-        { text: "Get in touch", primary: false }
-      ]
-    }
+    // {
+    //   title: "Ride Smart, Ride Electric",
+    //   mobileImage: slide3mobile,
+    //   tabletImage: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=1200&h=800&fit=crop",
+    //   desktopImage: slideImage6,
+    //   buttons: [
+    //     { text: "Book a Testride", primary: true },
+
+    //   ]
+    // }
   ];
 
 const features = [

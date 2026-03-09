@@ -8,54 +8,32 @@ export default function Header() {
   return (
     <>
       {/* Desktop Header */}
-      <div className="hidden md:flex w-full justify-center pt-6 fixed top-0 z-30">
-        <nav
-          className="
-          flex items-center gap-8
-          px-6 py-3
-          rounded-2xl
-          bg-black/80
-          backdrop-blur-md
-          border border-white/20
-          shadow-lg
-        "
-        >
+      <div className="hidden md:flex w-full sticky top-0 z-30 bg-black/90 backdrop-blur-md border-b border-white/10 shadow-md">
+        <nav className="flex items-center w-full px-8 py-3">
           {/* Logo */}
-          <div className="flex items-center gap-2 text-bl font-medium">
-            <div className="rounded-md bg-white/10 flex items-center justify-center">
-              <img src={logo} alt="Logo" className="w-20" />
+          <div className="flex items-center gap-2 font-medium">
+            <div className="flex items-center justify-center">
+              <img src={logo} alt="Logo" className="w-16" />
             </div>
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-8 text-white/90">
+          <div className="flex items-center gap-8 text-white/90 mx-auto">
             <a className="hover:text-white transition cursor-pointer">Home</a>
             <a className="hover:text-white transition cursor-pointer">Scooters</a>
             <a className="hover:text-white transition cursor-pointer">Contact</a>
           </div>
 
           {/* Button */}
-          <button
-            className="
-            ml-4
-            px-4 py-2
-            font-bold
-            rounded-xl
-            bg-white/90
-            text-black
-            text-sm
-            hover:bg-black
-            transition
-          "
-          >
-           Book a Test Ride
+          <button className="px-5 py-2 font-semibold rounded-lg bg-white text-black text-sm hover:bg-white/80 transition">
+            Book a Test Ride
           </button>
         </nav>
       </div>
 
       {/* Mobile Header */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-30 p-4">
-        <div className="flex items-center justify-between bg-black backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3 shadow-lg">
+      <div className="md:hidden sticky top-0 left-0 right-0 z-30 bg-black/90 backdrop-blur-md border-b border-white/10 shadow-md">
+        <div className="flex items-center justify-between px-4 py-3">
           {/* Logo */}
           <div className="flex items-center gap-2 text-white font-medium">
             <div className="rounded-md bg-white/20 flex items-center justify-center">
@@ -76,7 +54,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="mt-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg overflow-hidden">
+          <div className="bg-black/95 border-t border-white/10 shadow-lg overflow-hidden">
             <div className="flex flex-col p-4 space-y-4">
               <a
                 className="text-white/90 hover:text-white transition py-2 cursor-pointer"
@@ -102,8 +80,8 @@ export default function Header() {
                 px-4 py-3
                 font-bold
                 rounded-xl
-                bg-black/90
-                text-white
+                bg-white
+                text-black
                 text-sm
                 hover:bg-black
                 transition
